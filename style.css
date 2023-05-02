@@ -1,0 +1,248 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  
+}
+main {
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+  background-color: hsl(36, 100%, 99%);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+}
+li {
+  margin-right: 20px;
+  list-style: none;
+  color: hsl(236, 13%, 42%);
+  font-size: 16px;
+  font-weight: 100;
+  cursor: pointer;
+}
+li:hover {
+  color: hsl(5, 85%, 63%);
+}
+#menu-close{
+  display: none;
+}
+#menu-open{
+  display: none;
+}
+.first {
+  height: 370px;
+  margin-top: 30px;
+  display: flex;
+  gap: 50px;
+}
+.container-1 {
+  width: 70%;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.container-1 > div {
+  height: 180px;
+}
+.box1 {
+  grid-area: 1 / span 2;
+}
+.box1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mobile {
+  display: none;
+}
+.box2 h1 {
+  font-weight: 800;
+  margin: 20px 0;
+}
+.box3 p {
+  font-size: 10px;
+  margin: 20px 10px;
+  color: hsl(236, 13%, 42%);
+}
+.box3 a {
+  text-decoration: none;
+  margin: 5px 10px;
+  background-color: hsl(5, 85%, 63%);
+  padding: 10px 25px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #fff;
+}
+.box3 a:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+.container-2 {
+  width: 300px;
+  padding: 20px;
+  background-color: hsl(240, 100%, 5%);
+}
+.container-2 h2 {
+  color: #fff;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.container-2 p {
+  color: hsl(236, 24%, 77%);
+  font-size: 12px;
+  margin: 10px 0;
+}
+.container-2 h1 {
+  color: hsl(35, 77%, 62%);
+}
+hr {
+  border: 0.5px solid hsl(236, 13%, 42%);
+}
+.container-2 h2:hover {
+  color: hsl(35, 77%, 62%);
+}
+.second {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.second img {
+  width: 80px;
+  height: 100px;
+  float: left;
+  margin-right: 20px;
+}
+.second > div {
+  width: 400px;
+}
+h4 {
+  color: hsl(236, 24%, 77%);
+  font-size: 17px;
+  font-weight: 700;
+}
+.second > div h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.second > div h3:hover {
+  color: hsl(5, 85%, 63%);
+}
+.second > div p {
+  font-size: 12px;
+  color: hsl(236, 13%, 42%);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 680px) {
+  main {
+    height: 200vh;
+  }
+  #menu-open{
+    width: 40px;
+    display: block;
+    background: transparent;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+  }
+  nav{
+    position: relative;
+  }
+  ul{
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 5%;
+  }
+  li {
+    margin-bottom: 15px;
+  }
+ 
+  #menu-close{
+    display: block;
+    background: transparent;
+    z-index: 1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .nav-bar{
+    opacity: 0;
+   }
+   .open{
+    width: 50%;
+    height: 100vh;
+    padding: 0;
+    opacity: 1;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.3s ease-in-out;
+    
+  }
+  .open#menu-open{
+    z-index: 0;
+  }
+  .first {
+    height: 710px;
+    margin-top: 30px;
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+  }
+  .container-1 {
+    width: 100%;
+    height: 390px;
+    display: grid;
+    grid-template-rows: 178px 82px 126px;
+    grid-auto-flow: column;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .container-2 {
+    width: 100%;
+  }
+  .second {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .second > div {
+    width: 100%;
+  }
+}
