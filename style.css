@@ -158,7 +158,7 @@ h4 {
 
 @media only screen and (max-width: 680px) {
   main {
-    height: 180vh;
+    height: auto;
   }
   #menu-open{
     width: 40px;
